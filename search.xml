@@ -54,7 +54,7 @@
     
     
     <entry>
-      <title>html5写字板</title>
+      <title>vue组件封装以及插槽的使用</title>
       <link href="/2021/08/05/html5-xie-zi-ban/"/>
       <url>/2021/08/05/html5-xie-zi-ban/</url>
       
@@ -63,14 +63,14 @@
       
       <categories>
           
-          <category> Html </category>
+          <category> 组件 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> canvas </tag>
+            <tag> vue </tag>
             
         </tags>
       
