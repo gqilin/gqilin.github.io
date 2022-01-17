@@ -36,7 +36,8 @@
 body {
     background: url(/source//medias/banner/1.jpg);
     /* cursor:url(/source/medias/banner/1.jpg),auto; */
-    background: linear-gradient(60deg, rgba(123, 107, 177, 0.5) 5%, rgba(197, 113, 134, 0.35) );
+    /* background: linear-gradient(60deg, rgba(123, 107, 177, 0.5) 5%, rgba(197, 113, 134, 0.35) ); */
+    background: #51157e;
     margin: 0;
     color: #34495e;
 }
