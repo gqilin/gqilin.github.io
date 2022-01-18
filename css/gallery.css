@@ -53,8 +53,7 @@
 }
 .photo-item {
   display: block;
-  padding: 10px;
-  padding-bottom: 0;
+  padding: 4px;
   margin-bottom: 14px;
   font-size: 0;
   -moz-page-break-inside: avoid;
