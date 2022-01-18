@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="关于, 搭建博客,web开发,分享生活,分享知识">
+    <meta name="keywords" content="关于, 搭建博客,web开发,记录生活,分享知识">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -245,8 +245,15 @@
 
 
     <script>
-        // 每天切换 banner 图.  Switch banner image every day.
-        var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+        // 每天切换一张 banner 图.  Switch banner image every day.
+        // var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+
+        // 每分钟切换一张 banner 图.  Switch banner image every day.
+        // var bannerUrl = "/medias/banner/" + new Date().getMinutes() + '.jpg';
+
+        // 每小时切换一张 banner 图.  Switch banner image every day.
+        var bannerUrl = "/medias/banner/" + new Date().getHours() + '.jpg';
+
         $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
     </script>
     
@@ -262,21 +269,21 @@
                         <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                             
 <div class="statis">
-    <span class="count"><a href="/">8</a></span>
+    <span class="count"><a href="/">7</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">6</a></span>
+    <span class="count"><a href="/categories">5</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">8</a></span>
+    <span class="count"><a href="/tags">7</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -292,21 +299,21 @@
                                     <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                         
 <div class="statis">
-    <span class="count"><a href="/">8</a></span>
+    <span class="count"><a href="/">7</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">6</a></span>
+    <span class="count"><a href="/categories">5</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">8</a></span>
+    <span class="count"><a href="/tags">7</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -475,7 +482,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,8,0,0,0,0,0],
+                data: [0,0,0,0,0,0,0,7,0,0,0,0,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -517,7 +524,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"Vue","value":1},{"name":"后台","value":1},{"name":"uni-app","value":2},{"name":"搭建博客","value":1},{"name":"组件","value":1},{"name":"vue","value":1}],
+                data: [{"name":"Vue","value":2},{"name":"后台","value":1},{"name":"uni-app","value":2},{"name":"搭建博客","value":1},{"name":"canvas","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -541,7 +548,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["canvas","js获取时间","服务器","安卓打包","uni-app","Hexo","建站","vue"]
+                data: ["js获取时间","服务器","安卓打包","uni-app","Hexo","Vue","组件"]
             }
         ],
         yAxis: [
@@ -554,7 +561,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [1,1,1,1,1,1,1,1],
+                data: [1,1,1,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -724,12 +731,6 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/canvas/">
-                <span class="chip center-align waves-effect waves-light chip-default">canvas</span>
-            </a>
-            
-            
-            
             <a href="/tags/js%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4/">
                 <span class="chip center-align waves-effect waves-light chip-default">js获取时间</span>
             </a>
@@ -760,14 +761,14 @@
             
             
             
-            <a href="/tags/%E5%BB%BA%E7%AB%99/">
-                <span class="chip center-align waves-effect waves-light chip-default">建站</span>
+            <a href="/tags/Vue/">
+                <span class="chip center-align waves-effect waves-light chip-default">Vue</span>
             </a>
             
             
             
-            <a href="/tags/vue/">
-                <span class="chip center-align waves-effect waves-light chip-default">vue</span>
+            <a href="/tags/%E7%BB%84%E4%BB%B6/">
+                <span class="chip center-align waves-effect waves-light chip-default">组件</span>
             </a>
             
             

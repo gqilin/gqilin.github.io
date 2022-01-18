@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, 搭建博客,web开发,分享生活,分享知识">
+    <meta name="keywords" content="标签, 搭建博客,web开发,记录生活,分享知识">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -238,8 +238,15 @@
 
 
     <script>
-        // 每天切换 banner 图.  Switch banner image every day.
-        var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+        // 每天切换一张 banner 图.  Switch banner image every day.
+        // var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+
+        // 每分钟切换一张 banner 图.  Switch banner image every day.
+        // var bannerUrl = "/medias/banner/" + new Date().getMinutes() + '.jpg';
+
+        // 每小时切换一张 banner 图.  Switch banner image every day.
+        var bannerUrl = "/medias/banner/" + new Date().getHours() + '.jpg';
+
         $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
     </script>
     
@@ -260,11 +267,11 @@
                 
                 
                 
-                <a href="/categories/Vue/" title="Vue: 1">
+                <a href="/categories/Vue/" title="Vue: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             style="background-color: #F9EBEA;">Vue
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -296,19 +303,10 @@
                 </a>
                 
                 
-                <a href="/categories/%E7%BB%84%E4%BB%B6/" title="组件: 1">
+                <a href="/categories/canvas/" title="canvas: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #FEF9E7;">组件
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/vue/" title="vue: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F8F9F9;">vue
+                            style="background-color: #FEF9E7;">canvas
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -339,7 +337,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"canvas","weight":1,"link":"/tags/canvas/"},{"text":"js获取时间","weight":1,"link":"/tags/js获取时间/"},{"text":"服务器","weight":1,"link":"/tags/服务器/"},{"text":"安卓打包","weight":1,"link":"/tags/安卓打包/"},{"text":"uni-app","weight":1,"link":"/tags/uni-app/"},{"text":"Hexo","weight":1,"link":"/tags/Hexo/"},{"text":"建站","weight":1,"link":"/tags/建站/"},{"text":"vue","weight":1,"link":"/tags/vue/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"js获取时间","weight":1,"link":"/tags/js获取时间/"},{"text":"服务器","weight":1,"link":"/tags/服务器/"},{"text":"安卓打包","weight":1,"link":"/tags/安卓打包/"},{"text":"uni-app","weight":1,"link":"/tags/uni-app/"},{"text":"Hexo","weight":1,"link":"/tags/Hexo/"},{"text":"Vue","weight":1,"link":"/tags/Vue/"},{"text":"组件","weight":1,"link":"/tags/组件/"}], {
         autoResize: true
     });
 </script>
@@ -358,19 +356,10 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/canvas/" title="canvas: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="canvas" style="background-color: #F9EBEA;">canvas
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/js%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4/" title="js获取时间: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="js获取时间" style="background-color: #F5EEF8;">js获取时间
+                            data-tagname="js获取时间" style="background-color: #F9EBEA;">js获取时间
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -379,7 +368,7 @@
                 <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="服务器: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="服务器" style="background-color: #D5F5E3;">服务器
+                            data-tagname="服务器" style="background-color: #F5EEF8;">服务器
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -388,7 +377,7 @@
                 <a href="/tags/%E5%AE%89%E5%8D%93%E6%89%93%E5%8C%85/" title="安卓打包: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="安卓打包" style="background-color: #E8F8F5;">安卓打包
+                            data-tagname="安卓打包" style="background-color: #D5F5E3;">安卓打包
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -397,7 +386,7 @@
                 <a href="/tags/uni-app/" title="uni-app: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="uni-app" style="background-color: #FEF9E7;">uni-app
+                            data-tagname="uni-app" style="background-color: #E8F8F5;">uni-app
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -406,25 +395,25 @@
                 <a href="/tags/Hexo/" title="Hexo: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Hexo" style="background-color: #F8F9F9;">Hexo
+                            data-tagname="Hexo" style="background-color: #FEF9E7;">Hexo
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E5%BB%BA%E7%AB%99/" title="建站: 1">
+                <a href="/tags/Vue/" title="Vue: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="建站" style="background-color: #82E0AA;">建站
+                            data-tagname="Vue" style="background-color: #F8F9F9;">Vue
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/vue/" title="vue: 1">
+                <a href="/tags/%E7%BB%84%E4%BB%B6/" title="组件: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="vue" style="background-color: #D7BDE2;">vue
+                            data-tagname="组件" style="background-color: #82E0AA;">组件
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -469,7 +458,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"Vue","max":3},{"name":"后台","max":3},{"name":"uni-app","max":3},{"name":"搭建博客","max":3},{"name":"组件","max":3},{"name":"vue","max":3}],
+            indicator: [{"name":"Vue","max":3},{"name":"后台","max":3},{"name":"uni-app","max":3},{"name":"搭建博客","max":3},{"name":"canvas","max":3}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -480,7 +469,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [1,1,2,1,1,1],
+                    value : [2,1,2,1,1],
                     name : '文章分类数量'
                 }
             ]
@@ -552,7 +541,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,8,0,0,0,0,0],
+                data: [0,0,0,0,0,0,0,7,0,0,0,0,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -594,7 +583,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"Vue","value":1},{"name":"后台","value":1},{"name":"uni-app","value":2},{"name":"搭建博客","value":1},{"name":"组件","value":1},{"name":"vue","value":1}],
+                data: [{"name":"Vue","value":2},{"name":"后台","value":1},{"name":"uni-app","value":2},{"name":"搭建博客","value":1},{"name":"canvas","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -618,7 +607,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["canvas","js获取时间","服务器","安卓打包","uni-app","Hexo","建站","vue"]
+                data: ["js获取时间","服务器","安卓打包","uni-app","Hexo","Vue","组件"]
             }
         ],
         yAxis: [
@@ -631,7 +620,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [1,1,1,1,1,1,1,1],
+                data: [1,1,1,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{

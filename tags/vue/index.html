@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: vue, 搭建博客,web开发,分享生活,分享知识">
+    <meta name="keywords" content="标签: Vue, 搭建博客,web开发,记录生活,分享知识">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: vue | ζั͡ޓއއއ๓柒林€。</title>
+    <title>标签: Vue | ζั͡ޓއއއ๓柒林€。</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -238,8 +238,15 @@
 
 
     <script>
-        // 每天切换 banner 图.  Switch banner image every day.
-        var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+        // 每天切换一张 banner 图.  Switch banner image every day.
+        // var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+
+        // 每分钟切换一张 banner 图.  Switch banner image every day.
+        // var bannerUrl = "/medias/banner/" + new Date().getMinutes() + '.jpg';
+
+        // 每小时切换一张 banner 图.  Switch banner image every day.
+        var bannerUrl = "/medias/banner/" + new Date().getHours() + '.jpg';
+
         $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
     </script>
     
@@ -259,19 +266,10 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/canvas/" title="canvas: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="canvas" style="background-color: #F9EBEA;">canvas
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/js%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4/" title="js获取时间: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="js获取时间" style="background-color: #F5EEF8;">js获取时间
+                            data-tagname="js获取时间" style="background-color: #F9EBEA;">js获取时间
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -280,7 +278,7 @@
                 <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="服务器: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="服务器" style="background-color: #D5F5E3;">服务器
+                            data-tagname="服务器" style="background-color: #F5EEF8;">服务器
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -289,7 +287,7 @@
                 <a href="/tags/%E5%AE%89%E5%8D%93%E6%89%93%E5%8C%85/" title="安卓打包: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="安卓打包" style="background-color: #E8F8F5;">安卓打包
+                            data-tagname="安卓打包" style="background-color: #D5F5E3;">安卓打包
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -298,7 +296,7 @@
                 <a href="/tags/uni-app/" title="uni-app: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="uni-app" style="background-color: #FEF9E7;">uni-app
+                            data-tagname="uni-app" style="background-color: #E8F8F5;">uni-app
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -307,25 +305,25 @@
                 <a href="/tags/Hexo/" title="Hexo: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Hexo" style="background-color: #F8F9F9;">Hexo
+                            data-tagname="Hexo" style="background-color: #FEF9E7;">Hexo
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E5%BB%BA%E7%AB%99/" title="建站: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="建站" style="background-color: #82E0AA;">建站
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/vue/" title="vue: 1">
+                <a href="/tags/Vue/" title="Vue: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
-                            data-tagname="vue" style="background-color: #D7BDE2;">vue
+                            data-tagname="Vue" style="background-color: #F8F9F9;">Vue
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%BB%84%E4%BB%B6/" title="组件: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="组件" style="background-color: #82E0AA;">组件
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -341,15 +339,15 @@
         <div class="row tags-posts">
             
             
-            <div class="article tag-post col s12 m6 l4" data-tags="vue" data-aos="fade-up">
+            <div class="article tag-post col s12 m6 l4" data-tags="Vue" data-aos="fade-up">
                 <div class="card">
-                    <a href="/2021/08/05/html5-xie-zi-ban/">
+                    <a href="/2021/08/05/2021/html5-xie-zi-ban/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="vue组件封装以及插槽的使用">
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="html5写字板">
                             
-                            <span class="card-title">vue组件封装以及插槽的使用</span>
+                            <span class="card-title">html5写字板</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
@@ -361,8 +359,8 @@
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E7%BB%84%E4%BB%B6/" class="post-category">
-                                组件
+                                <a href="/categories/canvas/" class="post-category">
+                                canvas
                                 </a>
                                 
                                 

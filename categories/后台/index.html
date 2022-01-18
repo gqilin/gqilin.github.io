@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类: 后台, 搭建博客,web开发,分享生活,分享知识">
+    <meta name="keywords" content="分类: 后台, 搭建博客,web开发,记录生活,分享知识">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -238,8 +238,15 @@
 
 
     <script>
-        // 每天切换 banner 图.  Switch banner image every day.
-        var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+        // 每天切换一张 banner 图.  Switch banner image every day.
+        // var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+
+        // 每分钟切换一张 banner 图.  Switch banner image every day.
+        // var bannerUrl = "/medias/banner/" + new Date().getMinutes() + '.jpg';
+
+        // 每小时切换一张 banner 图.  Switch banner image every day.
+        var bannerUrl = "/medias/banner/" + new Date().getHours() + '.jpg';
+
         $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
     </script>
     
@@ -260,11 +267,11 @@
                 
                 
                 
-                <a href="/categories/Vue/" title="Vue: 1">
+                <a href="/categories/Vue/" title="Vue: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             style="background-color: #F9EBEA;">Vue
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -296,19 +303,10 @@
                 </a>
                 
                 
-                <a href="/categories/%E7%BB%84%E4%BB%B6/" title="组件: 1">
+                <a href="/categories/canvas/" title="canvas: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #FEF9E7;">组件
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/vue/" title="vue: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F8F9F9;">vue
+                            style="background-color: #FEF9E7;">canvas
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -327,7 +325,7 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/08/05/li-yong-node-js-xie-ge-fu-wu-qi/">
+                    <a href="/2021/08/05/2021/li-yong-node-js-xie-ge-fu-wu-qi/">
                         <div class="card-image tag-image">
                             
                             
@@ -339,11 +337,7 @@
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                
-在文件夹中创建一个api.js文件，用vscode打开，在终端运行以下代码：1.npm init -y 初始化一个项目2.npm i express -S 安装 express
-
-在api.js文件中//引入http模块
-//requir
+                                利用Node.js搭建一个本地服务，进行简单的数据交互
                             
                         </div>
                         <div class="publish-info">

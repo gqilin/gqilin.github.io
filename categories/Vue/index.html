@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类: vue, 搭建博客,web开发,分享生活,分享知识">
+    <meta name="keywords" content="分类: Vue, 搭建博客,web开发,记录生活,分享知识">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类: vue | ζั͡ޓއއއ๓柒林€。</title>
+    <title>分类: Vue | ζั͡ޓއއއ๓柒林€。</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -238,8 +238,15 @@
 
 
     <script>
-        // 每天切换 banner 图.  Switch banner image every day.
-        var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+        // 每天切换一张 banner 图.  Switch banner image every day.
+        // var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+
+        // 每分钟切换一张 banner 图.  Switch banner image every day.
+        // var bannerUrl = "/medias/banner/" + new Date().getMinutes() + '.jpg';
+
+        // 每小时切换一张 banner 图.  Switch banner image every day.
+        var bannerUrl = "/medias/banner/" + new Date().getHours() + '.jpg';
+
         $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
     </script>
     
@@ -260,11 +267,11 @@
                 
                 
                 
-                <a href="/categories/Vue/" title="Vue: 1">
+                <a href="/categories/Vue/" title="Vue: 2">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
+                             chip-active "
                             style="background-color: #F9EBEA;">Vue
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -296,19 +303,10 @@
                 </a>
                 
                 
-                <a href="/categories/%E7%BB%84%E4%BB%B6/" title="组件: 1">
+                <a href="/categories/canvas/" title="canvas: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #FEF9E7;">组件
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/vue/" title="vue: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #F8F9F9;">vue
+                            style="background-color: #FEF9E7;">canvas
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -327,26 +325,19 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/08/05/vue-zu-jian-feng-zhuang-1/">
+                    <a href="/2021/08/05/2021/vue-zu-jian-feng-zhuang-1/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="html5写字板">
+                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="vue组件封装以及插槽的使用">
                             
-                            <span class="card-title">html5写字板</span>
+                            <span class="card-title">vue组件封装以及插槽的使用</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                文章为个人学习vue项目中的笔记，好记性不如烂笔头，方便日后查看，如有疏漏请见谅！
-
-vue组件的封装注册组件1.注册全局组件
-==子组件==
-&lt;template>
-&lt;div>
- &lt;h1>子组件内容&lt;/h1>
- &l
+                                记录Vue封装自定义组件，父子传参以及插槽的使用方式
                             
                         </div>
                         <div class="publish-info">
@@ -357,8 +348,8 @@ vue组件的封装注册组件1.注册全局组件
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/vue/" class="post-category">
-                                    vue
+                                <a href="/categories/Vue/" class="post-category">
+                                    Vue
                                 </a>
                                 
                                 
@@ -369,8 +360,54 @@ vue组件的封装注册组件1.注册全局组件
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/canvas/">
-                            <span class="chip bg-color">canvas</span>
+                        <a href="/tags/%E7%BB%84%E4%BB%B6/">
+                            <span class="chip bg-color">组件</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/08/05/2021/yi-zhou-wei-dan-wei-xian-shi-shi-jian/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="一周为单位显示时间">
+                            
+                            <span class="card-title">一周为单位显示时间</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                通过js实现时间格式以，周的形式展示
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-05
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Vue/" class="post-category">
+                                    Vue
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/js%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4/">
+                            <span class="chip bg-color">js获取时间</span>
                         </a>
                         
                     </div>
