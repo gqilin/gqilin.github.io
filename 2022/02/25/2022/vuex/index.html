@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Android平台签名证书生成, 搭建博客,web开发,记录生活,分享知识">
+    <meta name="keywords" content="Vuex安卓以及使用, 搭建博客,web开发,记录生活,分享知识">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Android平台签名证书生成 | ζั͡ޓއއއ๓柒林€。</title>
+    <title>Vuex安卓以及使用 | ζั͡ޓއއއ๓柒林€。</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -225,12 +225,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://yufengtuchuang.oss-cn-beijing.aliyuncs.com/banner/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://yufengtuchuang.oss-cn-beijing.aliyuncs.com/banner/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Android平台签名证书生成</h1>
+                    <h1 class="description center-align post-title">Vuex安卓以及使用</h1>
                 </div>
             </div>
         </div>
@@ -346,8 +346,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%AE%89%E5%8D%93%E6%89%93%E5%8C%85/">
-                                <span class="chip bg-color">安卓打包</span>
+                            <a href="/tags/%E7%BB%84%E4%BB%B6/">
+                                <span class="chip bg-color">组件</span>
                             </a>
                         
                     </div>
@@ -358,8 +358,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/uni-app/" class="post-category">
-                                uni-app
+                            <a href="/categories/Vue/" class="post-category">
+                                Vue
                             </a>
                         
                     </div>
@@ -371,14 +371,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-20
+                    2022-02-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-18
+                    2022-02-25
                 </div>
                 
 
@@ -402,83 +402,225 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Android平台签名证书-keystore-生成指南"><a href="#Android平台签名证书-keystore-生成指南" class="headerlink" title="Android平台签名证书(.keystore)生成指南"></a>Android平台签名证书(.keystore)生成指南</h1><ul>
-<li>Android平台打包发布apk应用，需要使用数字证书（.keystore文件）进行签名，用于表明开发者身份。</li>
-<li>Android证书的生成是自助和免费的，不需要审批或付费。</li>
-<li>可以使用JRE环境中的keytool命令生成。以下是windows平台生成证书的方法：</li>
-</ul>
-<h3 id="安装JRE环境（推荐使用JRE8环境，如已有可跳过）"><a href="#安装JRE环境（推荐使用JRE8环境，如已有可跳过）" class="headerlink" title="安装JRE环境（推荐使用JRE8环境，如已有可跳过）"></a>安装JRE环境（推荐使用JRE8环境，如已有可跳过）</h3><p>可从Oracle官方下载jre安装包：<a target="_blank" rel="noopener" href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">https://www.oracle.com/technetwork/java/javase/downloads/index.html</a><br>下面以Windows平台，jre安装目录为“C:\Program Files\Java\jre1.8.0_201”为例，实际操作时请修改为自己安装目录<br><strong>建议将JRE安装路径添加到系统环境变量，已配置可跳过此章节</strong><br>打开命令行（cmd），输入以下命令：</p>
-<pre class=" language-bash"><code class="language-bash">D:
-<span class="token keyword">set</span> PATH<span class="token operator">=</span>%PATH%<span class="token punctuation">;</span><span class="token string">"C:\Program Files\Java\jre1.8.0_201\bin"</span>
+                <h3 id="1-安装Vuex"><a href="#1-安装Vuex" class="headerlink" title="1.安装Vuex"></a>1.安装Vuex</h3><blockquote>
+<p>前言： 在2022年2月7日，Vue3成为了默认版本，npm i vue,安装的直接就是Vue3了，Vue3成为默认版本的同时，Vuex也更新到了4版本，</p>
+<p>所有直接运行 npm i vuex,安装的是Vuex4版本，Vuex的4版本，只能在Vue3中使用，Vue2 安装Vuex3版本，Vue3安装Vuex4版本</p>
+</blockquote>
+<pre class=" language-apl"><code class="language-apl">安装命令：npm i vuex
+vue<span class="token number">2</span>版本执行：npm i vuex@<span class="token number">3</span>
 </code></pre>
-<ul>
-<li>第一行：切换工作目录到D:路径</li>
-<li>第二行：将jre命令添加到临时环境变量中</li>
-</ul>
-<h3 id="生成签名证书"><a href="#生成签名证书" class="headerlink" title="生成签名证书"></a>生成签名证书</h3><p>使用keytool -genkey命令生成证书：</p>
-<pre class=" language-bash"><code class="language-bash">keytool -genkey -alias testalias -keyalg RSA -keysize 2048 -validity 36500 -keystore test.keystore
-</code></pre>
-<ul>
-<li>testalias是证书别名，可修改为自己想设置的字符，建议使用英文字母和数字</li>
-<li>test.keystore是证书文件名称，可修改为自己想设置的文件名称，也可以指定完整文件路径</li>
-<li>36500是证书的有效期，表示100年有效期，单位天，建议时间设置长一点，避免证书过期</li>
-</ul>
-<p>回车后会提示：</p>
-<pre class=" language-bash"><code class="language-bash">Enter keystore password:  //输入证书文件密码，输入完成回车  
-Re-enter new password:   //再次输入证书文件密码，输入完成回车  
-What is your first and last name?  
-  <span class="token punctuation">[</span>Unknown<span class="token punctuation">]</span>:  //输入名字和姓氏，输入完成回车  
-What is the name of your organizational unit?  
-  <span class="token punctuation">[</span>Unknown<span class="token punctuation">]</span>:  //输入组织单位名称，输入完成回车  
-What is the name of your organization?  
-  <span class="token punctuation">[</span>Unknown<span class="token punctuation">]</span>:  //输入组织名称，输入完成回车  
-What is the name of your City or Locality?  
-  <span class="token punctuation">[</span>Unknown<span class="token punctuation">]</span>:  //输入城市或区域名称，输入完成回车  
-What is the name of your State or Province?  
-  <span class="token punctuation">[</span>Unknown<span class="token punctuation">]</span>:  //输入省/市/自治区名称，输入完成回车  
-What is the two-letter country code <span class="token keyword">for</span> this unit?  
-  <span class="token punctuation">[</span>Unknown<span class="token punctuation">]</span>:  //输入国家/地区代号（两个字母），中国为CN，输入完成回车  
-Is CN<span class="token operator">=</span>XX, OU<span class="token operator">=</span>XX, O<span class="token operator">=</span>XX, L<span class="token operator">=</span>XX, ST<span class="token operator">=</span>XX, C<span class="token operator">=</span>XX correct?  
-  <span class="token punctuation">[</span>no<span class="token punctuation">]</span>:  //确认上面输入的内容是否正确，输入y，回车  
+<h3 id="2-创建store文件夹"><a href="#2-创建store文件夹" class="headerlink" title="2.创建store文件夹"></a>2.创建store文件夹</h3><blockquote>
+<p>在根目录创建一个store文件夹，文件夹中创建index.js文件</p>
+</blockquote>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span>
 
-Enter key password <span class="token keyword">for</span> <span class="token operator">&lt;</span>testalias<span class="token operator">></span>  
-        <span class="token punctuation">(</span>RETURN <span class="token keyword">if</span> same as keystore password<span class="token punctuation">)</span>:  //确认证书密码与证书文件密码一样（HBuilder<span class="token operator">|</span>HBuilderX要求这两个密码一致），直接回车就可以
-</code></pre>
-<p>以上命令运行完成后就会生成证书，路径为“D:\test.keystore”。</p>
-<p><strong>注意：上述信息填写要规范，乱填有可能会影响应用上架应用市场。</strong></p>
-<p>可以使用以下命令查看：</p>
-<pre class=" language-bash"><code class="language-bash">keytool -list -v -keystore test.keystore  
-Enter keystore password: //输入密码，回车
-</code></pre>
-<p>会输出以下格式信息：</p>
-<pre class=" language-apl"><code class="language-apl">Keystore type<span class="token dfn builtin">:</span> PKCS<span class="token number">12</span>    
-Keystore provider<span class="token dfn builtin">:</span> SUN    
+<span class="token comment" spellcheck="true">// 创建并暴露Store</span>
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
 
-Your keystore contains <span class="token number">1</span> entry    
+    <span class="token comment" spellcheck="true">//定义状态</span>
+    state<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        userId<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+        name<span class="token punctuation">:</span> <span class="token string">'张三'</span><span class="token punctuation">,</span>
+        age<span class="token punctuation">:</span> <span class="token number">18</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-Alias name<span class="token dfn builtin">:</span> test    
-Creation date<span class="token dfn builtin">:</span> <span class="token number">2019</span><span class="token function">-</span><span class="token number">10</span><span class="token function">-</span><span class="token number">28</span>    
-Entry type<span class="token dfn builtin">:</span> PrivateKeyEntry    
-Certificate chain length<span class="token dfn builtin">:</span> <span class="token number">1</span>    
-Certificate<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token dfn builtin">:</span>    
-Owner<span class="token dfn builtin">:</span> CN<span class="token function">=</span>Tester<span class="token function">,</span> OU<span class="token function">=</span>Test<span class="token function">,</span> O<span class="token function">=</span>Test<span class="token function">,</span> L<span class="token function">=</span>HD<span class="token function">,</span> ST<span class="token function">=</span>BJ<span class="token function">,</span> C<span class="token function">=</span>CN    
-Issuer<span class="token dfn builtin">:</span> CN<span class="token function">=</span>Tester<span class="token function">,</span> OU<span class="token function">=</span>Test<span class="token function">,</span> O<span class="token function">=</span>Test<span class="token function">,</span> L<span class="token function">=</span>HD<span class="token function">,</span> ST<span class="token function">=</span>BJ<span class="token function">,</span> C<span class="token function">=</span>CN    
-Serial number<span class="token dfn builtin">:</span> <span class="token number">7</span>dd<span class="token number">12840</span>    
-Valid from<span class="token dfn builtin">:</span> Fri Jul <span class="token number">26</span> <span class="token number">20</span><span class="token dfn builtin">:</span><span class="token number">52</span><span class="token dfn builtin">:</span><span class="token number">56</span> CST <span class="token number">2019</span> until<span class="token dfn builtin">:</span> Sun Jul <span class="token number">02</span> <span class="token number">20</span><span class="token dfn builtin">:</span><span class="token number">52</span><span class="token dfn builtin">:</span><span class="token number">56</span> CST <span class="token number">2119</span>    
-Certificate fingerprints<span class="token dfn builtin">:</span>    
-         MD<span class="token number">5</span><span class="token dfn builtin">:</span>  F<span class="token number">9</span><span class="token dfn builtin">:</span>F<span class="token number">6</span><span class="token dfn builtin">:</span>C<span class="token number">8</span><span class="token dfn builtin">:</span><span class="token number">1</span>F<span class="token dfn builtin">:</span>DB<span class="token dfn builtin">:</span>AB<span class="token dfn builtin">:</span><span class="token number">50</span><span class="token dfn builtin">:</span><span class="token number">14</span><span class="token dfn builtin">:</span><span class="token number">7</span>D<span class="token dfn builtin">:</span><span class="token number">6</span>F<span class="token dfn builtin">:</span><span class="token number">2</span>C<span class="token dfn builtin">:</span><span class="token number">4</span>F<span class="token dfn builtin">:</span>CE<span class="token dfn builtin">:</span>E<span class="token number">6</span><span class="token dfn builtin">:</span><span class="token number">0</span>A<span class="token dfn builtin">:</span>A<span class="token number">5</span>    
-         SHA<span class="token number">1</span><span class="token dfn builtin">:</span> BB<span class="token dfn builtin">:</span>AC<span class="token dfn builtin">:</span>E<span class="token number">2</span><span class="token dfn builtin">:</span><span class="token number">2</span>F<span class="token dfn builtin">:</span><span class="token number">97</span><span class="token dfn builtin">:</span><span class="token number">3</span>B<span class="token dfn builtin">:</span><span class="token number">18</span><span class="token dfn builtin">:</span><span class="token number">02</span><span class="token dfn builtin">:</span>E<span class="token number">7</span><span class="token dfn builtin">:</span>D<span class="token number">6</span><span class="token dfn builtin">:</span><span class="token number">69</span><span class="token dfn builtin">:</span>A<span class="token number">3</span><span class="token dfn builtin">:</span><span class="token number">7</span>A<span class="token dfn builtin">:</span><span class="token number">28</span><span class="token dfn builtin">:</span>EF<span class="token dfn builtin">:</span>D<span class="token number">2</span><span class="token dfn builtin">:</span><span class="token number">3</span>F<span class="token dfn builtin">:</span>A<span class="token number">3</span><span class="token dfn builtin">:</span><span class="token number">68</span><span class="token dfn builtin">:</span>E<span class="token number">7</span>    
-         SHA<span class="token number">256</span><span class="token dfn builtin">:</span> <span class="token number">24</span><span class="token dfn builtin">:</span><span class="token number">11</span><span class="token dfn builtin">:</span><span class="token number">7</span>D<span class="token dfn builtin">:</span>E<span class="token number">7</span><span class="token dfn builtin">:</span><span class="token number">36</span><span class="token dfn builtin">:</span><span class="token number">12</span><span class="token dfn builtin">:</span>BC<span class="token dfn builtin">:</span>FE<span class="token dfn builtin">:</span>AF<span class="token dfn builtin">:</span><span class="token number">2</span>A<span class="token dfn builtin">:</span><span class="token number">6</span>A<span class="token dfn builtin">:</span><span class="token number">24</span><span class="token dfn builtin">:</span>BD<span class="token dfn builtin">:</span><span class="token number">04</span><span class="token dfn builtin">:</span><span class="token number">4</span>F<span class="token dfn builtin">:</span><span class="token number">2</span>E<span class="token dfn builtin">:</span><span class="token number">33</span><span class="token dfn builtin">:</span>E<span class="token number">5</span><span class="token dfn builtin">:</span><span class="token number">2</span>D<span class="token dfn builtin">:</span><span class="token number">41</span><span class="token dfn builtin">:</span><span class="token number">96</span><span class="token dfn builtin">:</span><span class="token number">5</span>F<span class="token dfn builtin">:</span><span class="token number">50</span><span class="token dfn builtin">:</span><span class="token number">4</span>D<span class="token dfn builtin">:</span><span class="token number">74</span><span class="token dfn builtin">:</span><span class="token number">17</span><span class="token dfn builtin">:</span><span class="token number">7</span>F<span class="token dfn builtin">:</span><span class="token number">4</span>F<span class="token dfn builtin">:</span>E<span class="token number">2</span><span class="token dfn builtin">:</span><span class="token number">55</span><span class="token dfn builtin">:</span>EB<span class="token dfn builtin">:</span><span class="token number">26</span>    
-Signature algorithm name<span class="token dfn builtin">:</span> SHA<span class="token number">256</span>withRSA    
-Subject Public Key Algorithm<span class="token dfn builtin">:</span> <span class="token number">2048</span><span class="token function">-</span>bit RSA key    
-Version<span class="token dfn builtin">:</span> <span class="token number">3</span>
+    <span class="token comment" spellcheck="true">//用于处理异步操作getprodById</span>
+    actions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 一秒后清除用户Id</span>
+        <span class="token function">removeUserId</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                context<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'RemoveUserId'</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token comment" spellcheck="true">//修改状态</span>
+    mutations<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 保存用户Id</span>
+        <span class="token function">SaveUserId</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> userId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            state<span class="token punctuation">.</span>userId <span class="token operator">=</span> userId
+            uni<span class="token punctuation">.</span><span class="token function">setStorageSync</span><span class="token punctuation">(</span><span class="token string">'userId'</span><span class="token punctuation">,</span> userId<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+        <span class="token comment" spellcheck="true">// 删除用户Id</span>
+        <span class="token function">RemoveUserId</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            state<span class="token punctuation">.</span>userId <span class="token operator">=</span> <span class="token string">''</span>
+            uni<span class="token punctuation">.</span><span class="token function">removeStorageSync</span><span class="token punctuation">(</span><span class="token string">'userId'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token comment" spellcheck="true">//用于计算属性</span>
+    getters<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//计算商品总价</span>
+        <span class="token function">totalPrice</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> getter<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> getter<span class="token punctuation">.</span>selectList<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>price<span class="token punctuation">,</span> prod<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> price <span class="token operator">+</span> prod<span class="token punctuation">.</span>count <span class="token operator">*</span> prod<span class="token punctuation">.</span>price
+            <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> store
 </code></pre>
-<p>其中证书指纹信息（Certificate fingerprints）：</p>
-<ul>
-<li>MD5<br>证书的MD5指纹信息（安全码MD5）</li>
-<li>SHA1<br>证书的SHA1指纹信息（安全码SHA1）</li>
-<li>SHA256<br>证书的SHA256指纹信息（安全码SHA245）</li>
-</ul>
+<h3 id="3-全局引用store"><a href="#3-全局引用store" class="headerlink" title="3.全局引用store"></a>3.全局引用store</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//main.js文件中</span>
+
+<span class="token keyword">import</span> store <span class="token keyword">from</span> <span class="token string">'./store'</span>
+
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    store<span class="token punctuation">,</span>
+    <span class="token operator">...</span>App
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="4-组件中使用Vuex"><a href="#4-组件中使用Vuex" class="headerlink" title="4.组件中使用Vuex"></a>4.组件中使用Vuex</h3><pre class=" language-vue"><code class="language-vue"><template>
+  <view id="app">
+    <view id="demo">
+        <text>姓名:{{$store.state.name}}</text>
+        <text>{{$store.getters.processing}}</text>
+        <text>ID:{{$store.state.userId}}</text>
+    </view>
+    <view class="bnt">
+        <button type="default" @click="SaveUserId">保存用户ID</button>
+        <button type="default" @click="removeUserId">1秒后清除用户ID</button>
+    </view>
+  </view>
+</template>
+<script>
+  export default {
+    name: 'App',
+    data() {
+      return {
+      };
+    },
+    mounted() {
+        
+    },
+    methods:{
+        
+        // 保存用户ID
+        SaveUserId(){
+            this.$store.commit('SaveUserId','我是用户的ID')
+        },
+        
+        // 1秒后清除用户ID
+        removeUserId(){
+            this.$store.dispatch('removeUserId')
+        }
+    }
+  }
+</script>
+</code></pre>
+<h3 id="5-Vuex模块化"><a href="#5-Vuex模块化" class="headerlink" title="5.Vuex模块化"></a>5.Vuex模块化</h3><blockquote>
+<p>在根目录创建一个store文件夹，文件夹中创建index.js文件 接着再创建user.js 用户模块、order.js 订单模块…</p>
+</blockquote>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//index.js文件</span>
+
+<span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+<span class="token comment" spellcheck="true">// 引入用户模块的数据</span>
+<span class="token keyword">import</span> user <span class="token keyword">from</span> <span class="token string">'./user'</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// 创建并暴露Store</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    modules<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        user
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h6 id="user-js文件"><a href="#user-js文件" class="headerlink" title="user.js文件"></a>user.js文件</h6><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 用户相关的配置</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    namespaced<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+    <span class="token comment" spellcheck="true">// 储存数据</span>
+    state<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        userId<span class="token punctuation">:</span> uni<span class="token punctuation">.</span><span class="token function">getStorageSync</span><span class="token punctuation">(</span><span class="token string">'userId'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        name<span class="token punctuation">:</span> <span class="token string">'张三'</span><span class="token punctuation">,</span>
+        age<span class="token punctuation">:</span> <span class="token number">18</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token comment" spellcheck="true">// 响应组件中的动作(异步处理)</span>
+    actions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token function">removeUserId</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                context<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'RemoveUserId'</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token comment" spellcheck="true">// 操作数据</span>
+    mutations<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+
+        <span class="token comment" spellcheck="true">// 保存用户Id</span>
+        <span class="token function">SaveUserId</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> userId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            state<span class="token punctuation">.</span>userId <span class="token operator">=</span> userId
+            uni<span class="token punctuation">.</span><span class="token function">setStorageSync</span><span class="token punctuation">(</span><span class="token string">'userId'</span><span class="token punctuation">,</span> userId<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+        <span class="token comment" spellcheck="true">// 删除用户Id</span>
+        <span class="token function">RemoveUserId</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            state<span class="token punctuation">.</span>userId <span class="token operator">=</span> <span class="token string">''</span>
+            uni<span class="token punctuation">.</span><span class="token function">removeStorageSync</span><span class="token punctuation">(</span><span class="token string">'userId'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token comment" spellcheck="true">// 加工State中的数据</span>
+    getters<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 处理年龄数据格式</span>
+        <span class="token function">processing</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token string">'今年'</span> <span class="token operator">+</span> state<span class="token punctuation">.</span>age <span class="token operator">+</span> <span class="token string">'岁'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h6 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h6><pre class=" language-vue"><code class="language-vue"><template>
+    <view class="content">
+        <image class="logo" src="/static/logo.png"></image>
+        <view class="text-area">
+            <view class="">
+                <text class="title">{{processing}}</text>
+                <text class="title">{{userId}}</text>
+            </view>
+            <view class="">
+                <button type="default" @click="SaveUserId('我是用户Idddd')">保存用户ID</button>
+                <button type="default" @click="removeUserId()">1秒后清除用户ID</button>
+            </view>
+        </view>
+    </view>
+</template>
+
+<script>
+    import {
+        GetClassList
+    } from '../api/index.js'
+    import {
+        mapState,
+        mapActions,
+        mapMutations,
+        mapGetters
+    } from 'vuex'
+    export default {
+        data() {
+            return {
+                title: 'Hello'
+            }
+        },
+        computed: {
+            ...mapState('user', ['userId']),
+            ...mapGetters('user', ['processing'])
+        },
+        mounted() {
+            console.log(this.$store)
+        },
+        methods: {
+            ...mapMutations('user', ['SaveUserId']),
+            ...mapActions('user', ['removeUserId'])
+        }
+    }
+</script>
+</code></pre>
 
                 
             </div>
@@ -505,7 +647,7 @@ Version<span class="token dfn builtin">:</span> <span class="token number">3</sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gqilin.github.io/2021/08/20/2021/uni-app-da-bao/">https://gqilin.github.io/2021/08/20/2021/uni-app-da-bao/</a>
+                    <a href="https://gqilin.github.io/2022/02/25/2022/vuex/">https://gqilin.github.io/2022/02/25/2022/vuex/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -543,8 +685,8 @@ Version<span class="token dfn builtin">:</span> <span class="token number">3</sp
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%AE%89%E5%8D%93%E6%89%93%E5%8C%85/">
-                                    <span class="chip bg-color">安卓打包</span>
+                                <a href="/tags/%E7%BB%84%E4%BB%B6/">
+                                    <span class="chip bg-color">组件</span>
                                 </a>
                             
                         </div>
@@ -714,9 +856,10 @@ Version<span class="token dfn builtin">:</span> <span class="token number">3</sp
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/02/25/2022/vuex/">
                     <div class="card-image">
@@ -734,9 +877,9 @@ Version<span class="token dfn builtin">:</span> <span class="token number">3</sp
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -749,6 +892,7 @@ Version<span class="token dfn builtin">:</span> <span class="token number">3</sp
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -767,24 +911,24 @@ Version<span class="token dfn builtin">:</span> <span class="token number">3</sp
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/05/2021/uni-app-shang-chuan-tu-pian/">
+                <a href="/2021/08/20/2021/uni-app-da-bao/">
                     <div class="card-image">
                         
                         
-                        <img src="https://yufengtuchuang.oss-cn-beijing.aliyuncs.com/banner/11.jpg" class="responsive-img" alt="uni-app上传图片">
+                        <img src="https://yufengtuchuang.oss-cn-beijing.aliyuncs.com/banner/9.jpg" class="responsive-img" alt="Android平台签名证书生成">
                         
-                        <span class="card-title">uni-app上传图片</span>
+                        <span class="card-title">Android平台签名证书生成</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            uniApp上传本地图片基本逻辑，加一个小案例
+                            在windows平台使用JRE环境中的keytool命令，生成平台签名证书
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-20
                             </span>
                         <span class="publish-author">
                             
@@ -801,8 +945,8 @@ Version<span class="token dfn builtin">:</span> <span class="token number">3</sp
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/uni-app/">
-                        <span class="chip bg-color">uni-app</span>
+                    <a href="/tags/%E5%AE%89%E5%8D%93%E6%89%93%E5%8C%85/">
+                        <span class="chip bg-color">安卓打包</span>
                     </a>
                     
                 </div>
