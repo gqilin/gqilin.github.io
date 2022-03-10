@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="react脚手架配置代理, 搭建博客,web开发,记录生活,分享知识">
+    <meta name="keywords" content="live2d模型制作, 搭建博客,web开发,记录生活,分享知识">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>react脚手架配置代理 | ζั͡ޓއއއ๓柒林€。</title>
+    <title>live2d模型制作 | ζั͡ޓއއއ๓柒林€。</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -225,12 +225,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://yufengtuchuang.oss-cn-beijing.aliyuncs.com/banner/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://yufengtuchuang.oss-cn-beijing.aliyuncs.com/banner/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">react脚手架配置代理</h1>
+                    <h1 class="description center-align post-title">live2d模型制作</h1>
                 </div>
             </div>
         </div>
@@ -346,8 +346,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/react%EF%BC%8C%E4%BB%A3%E7%90%86/">
-                                <span class="chip bg-color">react，代理</span>
+                            <a href="/tags/%E6%A8%A1%E5%9E%8B%EF%BC%8Clive2d/">
+                                <span class="chip bg-color">模型，live2d</span>
                             </a>
                         
                     </div>
@@ -358,8 +358,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/react/" class="post-category">
-                                react
+                            <a href="/categories/live2d/" class="post-category">
+                                live2d
                             </a>
                         
                     </div>
@@ -371,14 +371,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-02-28
+                    2022-07-28
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-01
+                    2022-03-10
                 </div>
                 
 
@@ -402,52 +402,53 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><blockquote>
-<p>在package.json中追加如下配置</p>
+                <blockquote>
+<p>1.把文件夹使用Vsode打开，新建终端执行</p>
+<pre><code>cd samples 
+cd typescript
+cd demo 
+//执行到demo文件夹下时执行
+npm install
+npm run build
+npm run serve
+运行成功打开：http://localhost:5000就可以看到官网提供的示例
+</code></pre>
 </blockquote>
-<pre class=" language-json"><code class="language-json"><span class="token property">"proxy"</span><span class="token operator">:</span><span class="token string">"http://localhost:5000"</span>
+<h3 id="设置canvas样式"><a href="#设置canvas样式" class="headerlink" title="设置canvas样式"></a>设置canvas样式</h3><blockquote>
+<p>修改 ：TypeScript\Demo\src\lappdelegate.ts</p>
+<ul>
+<li>initialize()方法</li>
+</ul>
+<pre class=" language-js"><code class="language-js">    <span class="token comment" spellcheck="true">//原来是用js动态在网页上创建画布，画布的长宽在lappdefine.ts指定，现在直接在html中已经有了画布直接拿过来使用就行</span>
+    canvas <span class="token operator">=</span> <span class="token operator">&lt;</span>HTMLCanvasElement<span class="token operator">></span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"live2d"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// index.html中的id为live2d的画布</span>
+    canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> canvas<span class="token punctuation">.</span>width<span class="token punctuation">;</span>
+    canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> canvas<span class="token punctuation">.</span>height<span class="token punctuation">;</span>
 </code></pre>
-<p>说明：</p>
-<ol>
-<li>优点：配置简单，前端请求资源时可以不加任何前缀。</li>
-<li>缺点：不能配置多个代理。</li>
-<li>工作方式：上述方式配置代理，当请求了3000不存在的资源时，那么该请求会转发给5000 （优先匹配前端资源）</li>
-</ol>
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><ol>
-<li><p>第一步：创建代理配置文件</p>
-<pre><code>在src下创建配置文件：src/setupProxy.js
+<ul>
+<li>解决canvas背景不透明</li>
+</ul>
+<pre class=" language-js"><code class="language-js">     <span class="token comment" spellcheck="true">// 画面の初期化</span>
+     <span class="token comment" spellcheck="true">//159行左右 改为透明度0.0</span>
+     gl<span class="token punctuation">.</span><span class="token function">clearColor</span><span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-</li>
-<li><p>编写setupProxy.js配置具体代理规则：</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http-proxy-middleware'</span><span class="token punctuation">)</span>
-
-module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
-    <span class="token function">proxy</span><span class="token punctuation">(</span><span class="token string">'/api1'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">//api1是需要转发的请求(所有带有/api1前缀的请求都会转发给5000)</span>
-      target<span class="token punctuation">:</span> <span class="token string">'http://localhost:5000'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//配置转发目标地址(能返回数据的服务器地址)</span>
-      changeOrigin<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//控制服务器接收到的请求头中host字段的值</span>
-      <span class="token comment" spellcheck="true">/*
-          changeOrigin设置为true时，服务器收到的请求头中的host为：localhost:5000
-          changeOrigin设置为false时，服务器收到的请求头中的host为：localhost:3000
-          changeOrigin默认值为false，但我们一般将changeOrigin值设为true
-      */</span>
-      pathRewrite<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">'^/api1'</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true">//去除请求前缀，保证交给后台服务器的是正常请求地址(必须配置)</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token function">proxy</span><span class="token punctuation">(</span><span class="token string">'/api2'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> 
-      target<span class="token punctuation">:</span> <span class="token string">'http://localhost:5001'</span><span class="token punctuation">,</span>
-      changeOrigin<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-      pathRewrite<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">'^/api2'</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
+<ul>
+<li>随屏幕大小自动调整大小</li>
+</ul>
+<pre class=" language-js"><code class="language-js">注释掉页面中所有 <span class="token function">_resizeCanvas</span><span class="token punctuation">(</span><span class="token punctuation">)</span>方法
 </code></pre>
-</li>
-</ol>
-<p>说明：</p>
-<ol>
-<li>优点：可以配置多个代理，可以灵活的控制请求是否走代理。</li>
-<li>缺点：配置繁琐，前端请求资源时必须加前缀。</li>
-</ol>
+</blockquote>
+<h3 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h3><h5 id="1-人物无法铺满canvas"><a href="#1-人物无法铺满canvas" class="headerlink" title="1.人物无法铺满canvas"></a>1.人物无法铺满canvas</h5><blockquote>
+<p>修改 ：Framework\src\math\cubismmodelmatrix.ts里面的this.setHeight()</p>
+<p>大概在文件的30行</p>
+</blockquote>
+<h5 id="2-点击屏幕报错"><a href="#2-点击屏幕报错" class="headerlink" title="2.点击屏幕报错"></a>2.点击屏幕报错</h5><blockquote>
+<p>浏览器报错 <code>‘isHit&#39; of null</code></p>
+<p>修改 ：TypeScript\Demo\src\lappview.ts里面注释掉大概217行代码</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// if (this._gear.isHit(pointX, pointY)) {</span>
+<span class="token comment" spellcheck="true">//   live2DManager.nextScene();</span>
+<span class="token comment" spellcheck="true">// }</span>
+</code></pre>
+</blockquote>
 
                 
             </div>
@@ -474,7 +475,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gqilin.github.io/2022/02/28/2022/react/react-jiao-shou-jia-pei-zhi-dai-li/">https://gqilin.github.io/2022/02/28/2022/react/react-jiao-shou-jia-pei-zhi-dai-li/</a>
+                    <a href="https://gqilin.github.io/2022/07/28/2022/live2d/live2dweb/">https://gqilin.github.io/2022/07/28/2022/live2d/live2dweb/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -512,8 +513,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/react%EF%BC%8C%E4%BB%A3%E7%90%86/">
-                                    <span class="chip bg-color">react，代理</span>
+                                <a href="/tags/%E6%A8%A1%E5%9E%8B%EF%BC%8Clive2d/">
+                                    <span class="chip bg-color">模型，live2d</span>
                                 </a>
                             
                         </div>
@@ -683,46 +684,48 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/03/09/2022/uni-app/ios-da-bao/">
+                <a href="/2022/07/28/2022/live2d/live2dweb/">
                     <div class="card-image">
                         
                         
-                        <img src="https://yufengtuchuang.oss-cn-beijing.aliyuncs.com/banner/6.jpg" class="responsive-img" alt="ios证书和描述文件申请">
+                        <img src="https://yufengtuchuang.oss-cn-beijing.aliyuncs.com/banner/22.jpg" class="responsive-img" alt="live2d模型制作">
                         
-                        <span class="card-title">ios证书和描述文件申请</span>
+                        <span class="card-title">live2d模型制作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记录自己在ios证书和描述文件申请过程中的步骤和遇到的一些问题
+                            记录学习live2d模型制作过程，以及如何把模型展示在Vue项目中
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/uni-app/" class="post-category">
-                                    uni-app
+                            <a href="/categories/live2d/" class="post-category">
+                                    live2d
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ios%E8%AF%81%E4%B9%A6/">
-                        <span class="chip bg-color">ios证书</span>
+                    <a href="/tags/%E6%A8%A1%E5%9E%8B%EF%BC%8Clive2d/">
+                        <span class="chip bg-color">模型，live2d</span>
                     </a>
                     
                 </div>
@@ -736,31 +739,31 @@ module<span class="token punctuation">.</span>exports <span class="token operato
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/02/28/2022/react/react-ru-men/">
+                <a href="/2022/03/10/2022/vue/vue3/">
                     <div class="card-image">
                         
                         
-                        <img src="https://yufengtuchuang.oss-cn-beijing.aliyuncs.com/banner/22.jpg" class="responsive-img" alt="React入门">
+                        <img src="https://yufengtuchuang.oss-cn-beijing.aliyuncs.com/banner/22.jpg" class="responsive-img" alt="Vue3快速上手">
                         
-                        <span class="card-title">React入门</span>
+                        <span class="card-title">Vue3快速上手</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            react框架的简介，脚手架搭建、项目结构分析
+                            记录学习Vue3的安装使用，以及一些新特性的改动
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-10
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/react/" class="post-category">
-                                    react
+                            <a href="/categories/Vue/" class="post-category">
+                                    Vue
                                 </a>
                             
                             
@@ -770,8 +773,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/react%EF%BC%8C%E8%84%9A%E6%89%8B%E6%9E%B6/">
-                        <span class="chip bg-color">react，脚手架</span>
+                    <a href="/tags/Vue3/">
+                        <span class="chip bg-color">Vue3</span>
                     </a>
                     
                 </div>
